@@ -12,8 +12,11 @@ socket-io-next-app-router-node/
 │   |   ├── app/            # Next.js pages
 │   |   └── ...
 ├── server/                 # Node.js backend code
-|   |-- sockets
-|   |   |-- index.js        # socketHandler
+|   |-- src
+|   |   |-- config
+|   |   |   |-- index.js    # configuration file
+|   |   |-- sockets
+|   |   |   |-- index.js    # socketHandler
 │   ├── app.js              # Main server file
 │   └── ...
 ├── .gitignore              # Git ignore file
@@ -86,7 +89,7 @@ yarn dev
 yarn start
 ```
 
-The server should now be running on `http://localhost:5000` (or another port if configured).
+The server should now be running on `http://localhost:8000` (or another port if configured).
 
 ### 2. Start the Client
 
@@ -99,4 +102,4 @@ yarn dev
 
 The Next.js app should now be running on `http://localhost:3000`.
 
-You can now access the application by visiting `http://localhost:3000` in your browser. The client will communicate with the server running on `http://localhost:5000` (or whichever port your backend uses).
+You can now access the application by visiting `http://localhost:3000` in your browser. The client will communicate with the server running on `http://localhost:8000` (or whichever port your backend uses).
