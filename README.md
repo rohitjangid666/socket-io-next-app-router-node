@@ -6,18 +6,18 @@ This repository contains both the client-side (Next.js) and server-side (Node.js
 
 ```
 socket-io-next-app-router-node/
-├── client/          # Next.js frontend code
-│   ├── app/         # Next.js pages
-│   ├── components/  # React components
-│   ├── public/      # Static assets (images, fonts, etc.)
+├── client/                 # Next.js frontend code
+│   ├── public/             # Static assets (images, fonts, etc.)
+|   |-- src/
+│   |   ├── app/            # Next.js pages
+│   |   └── ...
+├── server/                 # Node.js backend code
+|   |-- sockets
+|   |   |-- index.js        # socketHandler
+│   ├── app.js              # Main server file
 │   └── ...
-├── server/          # Node.js backend code
-│   ├── controllers/ # Backend route handlers
-│   ├── models/      # Database models (e.g., Mongoose models for MongoDB)
-│   ├── app.js       # Main server file
-│   └── ...
-├── .gitignore       # Git ignore file
-└── README.md        # This README file
+├── .gitignore              # Git ignore file
+└── README.md               # This README file
 ```
 
 ## Prerequisites
