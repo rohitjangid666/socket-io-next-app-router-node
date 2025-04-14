@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 
+import Header from '@/components/ui/Header';
 import { SocketProvider } from '@/provider/socket';
 
 import './globals.css';
@@ -28,7 +29,11 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <SocketProvider>{children}</SocketProvider>
+        <SocketProvider>
+          <Header />
+
+          <div className='h-screen pt-20'>{children}</div>
+        </SocketProvider>
       </body>
     </html>
   );
