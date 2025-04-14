@@ -12,6 +12,11 @@ export const Chat = () => {
   useEffect(() => {
     if (!socket) return;
 
+    socket.emit('getMessages', 'Rohit Jangid');
+    socket.on('getMessagesResponse', (messages: MessageType[]) => {
+      console.log(`🔥💻 [my logger ~~~~~~~~~~ messages] -------- `, messages);
+    });
+
     socket.on('sendMessage', (message: string) => {
       setMessages(prevMessages => [
         ...prevMessages,
